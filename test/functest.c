@@ -26,8 +26,8 @@ CTEST(equation_suite, cropofsymbols)
 	//When
 	char fstring[260];
 	crop(string, fstring);
-	int ch = 'd';
-	int a = fstring[2];
+	const int ch = 'd';
+	const int a = fstring[2];
 
 	//Then
 	ASSERT_EQUAL(a, ch);
