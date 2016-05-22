@@ -1,5 +1,6 @@
 #include <ctest.h>
 #include <functions.h>
+#include <locale.h>
 
 CTEST(equation_suite, cropofsymbols)
 {
