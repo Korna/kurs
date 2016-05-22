@@ -31,4 +31,4 @@ CTEST(equation_suite, cropofsymbols)
 
 	//Then
 	ASSERT_EQUAL(a, ch);
-
+}
