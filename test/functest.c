@@ -10,8 +10,8 @@ const char string[] = "...madness!";
 //When
 char fstring[260];
 crop(string, fstring);
-const int ch = 's';
-int a = fstring[6]
+int ch = 's';
+int a = fstring[6];
 
 //Then
 ASSERT_EQUAL(a, ch);
