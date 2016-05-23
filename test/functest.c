@@ -181,7 +181,7 @@ CTEST(equation_suite, sort_eng)
 	ASSERT_EQUAL(expct_c, real_c);
 }
 
-CTEST(equation_suite, exchange_of_words)
+CTEST(equation_suite, exchange_of_eng_words)
 {
 	//Given
 	char string[]= "lmaaao aaaayyy";
@@ -198,4 +198,26 @@ CTEST(equation_suite, exchange_of_words)
 	//Then
 	ASSERT_EQUAL(expct, real);
 
+}
+
+CTEST(equation_suite, exchange_of_rus_words)
+{
+	setlocale(LC_ALL, "Rus");
+	//Given
+	char string[]= "באא ÿחü רר";
+	char *ptr[2];
+	stok(string, ptr);
+	exchange(ptr, 1);
+	char *tmp1 = ptr[0];
+	char *tmp2 = ptr[1];
+	//When
+	
+	const int real_ya = tmp2[0];
+	const int real_w = tmp1[0];
+	const int expct_ya = 'א';
+	const int expct_w = 'ר';
+
+	//Then
+	ASSERT_EQUAL(real_ya, expct_ya);
+	ASSERT_EQUAL(real_w, expct_w);
 }
