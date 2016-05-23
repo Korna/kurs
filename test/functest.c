@@ -40,7 +40,7 @@ CTEST(strings_process, search_of_rus_word)
 	setlocale(LC_ALL, "Rus");
 	//Given
 	char string[] = "...ÿקסלטנ";
-	const char ch = 'ÿ';
+	char ch = 'ÿ';
 	
 	//When
 	int rv = schr(string, ch);
@@ -132,7 +132,7 @@ CTEST(equation_suite, stok_multiple)
 	const int b = 'l';
 	const int c = 'a';//change
 	const int d = tmp1[0];
-	const exp_size = 2;
+	const int exp_size = 2;
 
 	//Then
 	ASSERT_EQUAL(b, a);
