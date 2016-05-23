@@ -187,7 +187,6 @@ CTEST(equation_suite, exchange_of_eng_words)
 	char *ptr[1];
 	ptr[0]="lmao";
 	ptr[1]="ay";
-	stok(string, ptr);
 	exchange(ptr, 0);
 	char *tmp1 = ptr[0];
 	char *tmp2 = ptr[1];
