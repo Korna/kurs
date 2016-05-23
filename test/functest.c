@@ -20,19 +20,20 @@ CTEST(equation_suite, cropofsymbols)
 
 }
 
-CTEST(equation_suite, cropofsymbols)
+CTEST(equation_suite, search_of_rus_word)
 {
+	setlocale(LC_ALL, "Rus");
 	//Given
-	const char string[] = "sad";
+	const char string[] = "...ÿקסלטנ.";
+	const char ch = 'ÿ';
 	
 	//When
-	char fstring[260];
-	crop(string, fstring);
-	const int a = fstring[2];
+	rv = schr(string, ch);
+	
 
 	//Then
-	const int ch = 'd';
+	const a = 3;
 
+	ASSERT_EQUAL(rv, a);
 
-	ASSERT_EQUAL(a, ch);
 }
