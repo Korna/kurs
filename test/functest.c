@@ -166,16 +166,17 @@ CTEST(equation_suite, sort_eng)
 	char *tmpa = ptr[0];
 	char *tmpb = ptr[1];
 	char *tmpc = ptr[2];
+
 	//When
-	
 	const int expct_a = 'a';
-	const int real_a = tmpa[0];
 	const int expct_b = 'b';
-	const int real_b = tmpb[0];
 	const int expct_c = 'c';
-	const int real_c = tmpc[0];
+
 
 	//Then
+	const int real_a = tmpa[0];
+	const int real_b = tmpb[0];
+	const int real_c = tmpc[0];
 	ASSERT_EQUAL(expct_a, real_a);
 	ASSERT_EQUAL(expct_b, real_b);
 	ASSERT_EQUAL(expct_c, real_c);
