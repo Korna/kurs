@@ -159,7 +159,7 @@ CTEST(equation_suite, stok_single)
 CTEST(equation_suite, sort_eng)
 {
 	//Given
-	char string[]= "bbb aaa ccc";
+	char string[]= "b a c";
 	char *ptr[3];
 	stok(string, ptr);
 	sort(ptr, 3);
@@ -184,7 +184,7 @@ CTEST(equation_suite, sort_eng)
 CTEST(equation_suite, exchange_of_eng_words)
 {
 	//Given
-	char string[]= "lmaaao aaaayyy";
+	char string[]= "lmao ay";
 	char *ptr[2];
 	stok(string, ptr);
 	exchange(ptr, 0);
@@ -204,17 +204,17 @@ CTEST(equation_suite, exchange_of_rus_words)
 {
 	setlocale(LC_ALL, "Rus");
 	//Given
-	char string[]= "בממ ÿחü רר";
+	char string[]= "במ ÿחü ר";
 	char *ptr[2];
 	stok(string, ptr);
 	exchange(ptr, 1);
-	char *tmp1 = ptr[1];
-	char *tmp2 = ptr[2];
+	char *tmp2 = ptr[1];
+	char *tmp1 = ptr[2];
 	//When
 	
 	const int real_ya = tmp2[0];
-	const int real_w = tmp1[0];
 	const int expct_ya = 'ÿ';
+	const int real_w = tmp1[0];
 	const int expct_w = 'ר';
 
 	//Then
