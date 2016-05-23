@@ -43,7 +43,7 @@ CTEST(strings_process, search_of_rus_word)
 	char ch = 'ÿ';
 	
 	//When
-	int rv = schr(string, ch);
+	const int rv = schr(string, ch);
 	
 
 	//Then
@@ -138,4 +138,45 @@ CTEST(equation_suite, stok_multiple)
 	ASSERT_EQUAL(b, a);
 	ASSERT_EQUAL(d, c);
 	ASSERT_EQUAL(exp_size, size);
+}
+
+CTEST(equation_suite, stok_single)
+{
+	//Given
+	char string[]= "haallo";
+	char *ptr[1];
+	stok(string, ptr);
+	char *tmp1 = ptr[0];
+	//When
+	
+	const int expct = 'h';
+	const int real = tmp1[0];
+
+	//Then
+	ASSERT_EQUAL(real, expct);
+}
+
+CTEST(equation_suite, sort_rus)
+{
+	//Given
+	char string[]= "bbbbbb aaaaaaa ccccc";
+	char *ptr[3];
+	stok(string, ptr);
+	sort(ptr, b);
+	char *tmp1 = ptr[0];
+	char *tmp2 = ptr[1];
+	char *tmp3 = ptr[2];
+	//When
+	
+	const int expct_a = 'a';
+	const int real_a = tmp1[0];
+	const int expct_b = 'b';
+	const int real_b = tmp2[0];
+	const int expct_c = 'c';
+	const int real_c = tmp3[0];
+
+	//Then
+	ASSERT_EQUAL(expct_a, real_a);
+	ASSERT_EQUAL(expct_b, real_b);
+	ASSERT_EQUAL(expct_c, real_c);
 }
