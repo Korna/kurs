@@ -189,11 +189,11 @@ CTEST(equation_suite, sort_rus)
 	setlocale(LC_ALL, "Rus");
 	//Given
 	char *ptr[3];
-	ptr[0]="прт";
-	ptr[1]="aд";
+	ptr[0]="опрт";
+	ptr[1]="Ад";
 	ptr[2]="ща";
-	ptr[3]="вы";
-	sort(ptr, 4);
+	ptr[3]="Бы";
+	sort(ptr, 3);
 	char *tmp1 = ptr[0];
 	char *tmp2 = ptr[1];
 	char *tmp3 = ptr[2];
@@ -206,9 +206,9 @@ CTEST(equation_suite, sort_rus)
 	const int real_4 = tmp4[0];
 
 	//Then
-	const int expct_1 = 'а';
-	const int expct_2 = 'в';
-	const int expct_3 = 'п';
+	const int expct_1 = 'А';
+	const int expct_2 = 'Б';
+	const int expct_3 = 'о';
 	const int expct_4 = 'щ';
 
 	ASSERT_EQUAL(expct_1, real_1);
