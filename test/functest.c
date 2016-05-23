@@ -2,7 +2,7 @@
 #include <functions.h>
 #include <locale.h>
 
-CTEST(equation_suite, cropofsymbols)
+CTEST(equation_suite, crop_of_symbols)
 {
 	//Given
 	char string[] = "...sad";
@@ -14,8 +14,22 @@ CTEST(equation_suite, cropofsymbols)
 
 	//Then
 	const int ch = 's';
+	ASSERT_EQUAL(a, ch);
 
+}
 
+CTEST(equation_suite, crop_of_symbols2)
+{
+	//Given
+	const char string[] = "‰Ë‰";
+	
+	//When
+	char fstring[260];
+	crop(string, fstring);
+	const int a = fstring[2]
+
+	//Then
+	const int ch = '‰';
 	ASSERT_EQUAL(a, ch);
 
 }
@@ -33,6 +47,24 @@ CTEST(strings_process, search_of_rus_word)
 
 	//Then
 	const int a = 3;
+
+	ASSERT_EQUAL(rv, a);
+
+}
+
+CTEST(strings_process, search_of_rus_cap_word)
+{
+	setlocale(LC_ALL, "Rus");
+	//Given
+	const char string[8] = "¿‡‡‡¿¿‡";
+	const char ch = '¿';
+	
+	//When
+	int rv = schr(string, ch);
+	
+
+	//Then
+	const int a = 0;
 
 	ASSERT_EQUAL(rv, a);
 
