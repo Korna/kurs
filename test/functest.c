@@ -162,7 +162,7 @@ CTEST(equation_suite, sort_eng)
 	char string[]= "bbb aaa ccc";
 	char *ptr[3];
 	stok(string, ptr);
-	sort(ptr, b);
+	sort(ptr, 3);
 	char *tmp1 = ptr[0];
 	char *tmp2 = ptr[1];
 	char *tmp3 = ptr[2];
