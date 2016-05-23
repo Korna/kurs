@@ -188,7 +188,7 @@ CTEST(equation_suite, sort_rus)
 {
 	setlocale(LC_ALL, "Rus");
 	//Given
-	char *ptr[4];
+	char *ptr[3];
 	ptr[0]="прт";
 	ptr[1]="aд";
 	ptr[2]="ща";
@@ -204,7 +204,6 @@ CTEST(equation_suite, sort_rus)
 	const int real_2 = tmp2[0];
 	const int real_3 = tmp3[0];
 	const int real_4 = tmp4[0];
-
 
 	//Then
 	const int expct_1 = 'а';
