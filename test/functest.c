@@ -204,9 +204,10 @@ CTEST(equation_suite, exchange_of_rus_words)
 {
 	setlocale(LC_ALL, "Rus");
 	//Given
-	char string[]= "במ ÿחü ר";
 	char *ptr[2];
-	stok(string, ptr);
+	ptr[0]="במ";
+	ptr[1]="ÿחü";
+	ptr[2]="ר";
 	exchange(ptr, 0);
 	char *tmp1 = ptr[1];
 	char *tmp = ptr[0];
