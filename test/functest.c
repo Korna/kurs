@@ -20,7 +20,7 @@ CTEST(equation_suite, cropofsymbols)
 
 }
 
-CTEST(equation_suite, search_of_rus_word)
+CTEST(strings_process, search_of_rus_word)
 {
 	setlocale(LC_ALL, "Rus");
 	//Given
@@ -34,6 +34,21 @@ CTEST(equation_suite, search_of_rus_word)
 	//Then
 	const a = 3;
 
+	ASSERT_EQUAL(rv, a);
+
+}
+
+CTEST(string_process, search_of_eng_word)
+{
+	//Given
+	const int char string[] = "twitter";
+	const int char ch = 'w';
+	
+	//When
+	const int rv = schr(string, ch);
+	const int a = 1;
+
+	//Then
 	ASSERT_EQUAL(rv, a);
 
 }
