@@ -10,9 +10,9 @@ CTEST(equation_suite, crop_of_symbols)
 	//When
 	char fstring[260];
 	crop(string, fstring);
-	const int a = fstring[0];
 
 	//Then
+	const int a = fstring[0];
 	const int ch = 's';
 	ASSERT_EQUAL(a, ch);
 
@@ -204,7 +204,7 @@ CTEST(equation_suite, exchange_of_rus_words)
 {
 	setlocale(LC_ALL, "Rus");
 	//Given
-	char string[]= "באא ÿחü רר";
+	char string[]= "בממ ÿחü רר";
 	char *ptr[2];
 	stok(string, ptr);
 	exchange(ptr, 1);
@@ -214,7 +214,7 @@ CTEST(equation_suite, exchange_of_rus_words)
 	
 	const int real_ya = tmp2[0];
 	const int real_w = tmp1[0];
-	const int expct_ya = 'א';
+	const int expct_ya = 'ÿ';
 	const int expct_w = 'ר';
 
 	//Then
