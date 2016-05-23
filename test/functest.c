@@ -22,7 +22,7 @@ CTEST(equation_suite, crop_of_symbols_rus)
 {
 	setlocale(LC_ALL, "Rus");
 	//Given
-	const char string[] = "הטה";
+	char string[] = "הטה";
 	
 	//When
 	char fstring[260];
@@ -39,7 +39,7 @@ CTEST(strings_process, search_of_rus_word)
 {
 	setlocale(LC_ALL, "Rus");
 	//Given
-	const char string[8] = "...ÿקסלטנ";
+	char string[] = "...ÿקסלטנ";
 	const char ch = 'ÿ';
 	
 	//When
@@ -106,8 +106,8 @@ CTEST(equation_suite, search_of_empty)
 CTEST(equation_suite, search_of_eng_word2)
 {
 	//Given
-	const int char string[] = "TTT";
-	const int char ch = 'T';
+	const char string[] = "TTT";
+	const char ch = 'T';
 	
 	//When
 	int rv = schr(string, ch);
@@ -132,7 +132,7 @@ CTEST(equation_suite, stok_multiple)
 	const int b = 'l';
 	const int c = 'a';//change
 	const int d = tmp1[0];
-	const exp_size = 1;
+	const exp_size = 2;
 
 	//Then
 	ASSERT_EQUAL(b, a);
