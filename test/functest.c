@@ -180,3 +180,22 @@ CTEST(equation_suite, sort_eng)
 	ASSERT_EQUAL(expct_b, real_b);
 	ASSERT_EQUAL(expct_c, real_c);
 }
+
+CTEST(equation_suite, exchange_of_words)
+{
+	//Given
+	char string[]= "lmaaao aaaayyy";
+	char *ptr[2];
+	stok(string, ptr);
+	exchange(ptr, 0);
+	char *tmp1 = ptr[0];
+	char *tmp2 = ptr[1];
+	//When
+	
+	const int a = tmp1[0];
+	const int b = 'l';
+
+	//Then
+	ASSERT_EQUAL(b, a);
+
+}
