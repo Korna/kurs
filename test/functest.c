@@ -57,8 +57,8 @@ CTEST(strings_process, search_of_rus_cap_word)
 {
 	setlocale(LC_ALL, "Rus");
 	//Given
-	const char string[8] = "¿‡‡‡¿¿‡";
-	const char ch = '¿';
+	char string[8] = "¿‡‡‡¿¿‡";
+	char ch = '¿';
 	
 	//When
 	int rv = schr(string, ch);
@@ -74,8 +74,8 @@ CTEST(strings_process, search_of_rus_cap_word)
 CTEST(string_process, search_of_eng_word)
 {
 	//Given
-	const char string[] = "twitter";
-	const char ch = 'w';
+	char string[] = "twitter";
+	char ch = 'w';
 	
 	//When
 	int rv = schr(string, ch);
@@ -90,8 +90,8 @@ CTEST(equation_suite, search_of_empty)
 {
 	
 	//Given
-	const char string[] = "123456789";
-	const char ch = 'Z';
+	char string[] = "123456789";
+	char ch = 'Z';
 	
 	//When
 	int rv = schr(string, ch);
@@ -106,8 +106,8 @@ CTEST(equation_suite, search_of_empty)
 CTEST(equation_suite, search_of_eng_word2)
 {
 	//Given
-	const char string[] = "TTT";
-	const char ch = 'T';
+	char string[] = "TTT";
+	char ch = 'T';
 	
 	//When
 	int rv = schr(string, ch);
