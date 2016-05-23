@@ -184,6 +184,39 @@ CTEST(equation_suite, sort_eng)
 	ASSERT_EQUAL(expct_c, real_c);
 }
 
+CTEST(equation_suite, sort_rus)
+{
+	//Given
+	char *ptr[4];
+	ptr[0]="прт";
+	ptr[1]="aд";
+	ptr[2]="ща";
+	ptr[3]="вы";
+	sort(ptr, 4);
+	char *tmp1 = ptr[0];
+	char *tmp2 = ptr[1];
+	char *tmp3 = ptr[2];
+	char *tmp4 = ptr[3];
+
+	//When
+	const int real_1 = tmp1[0];
+	const int real_2 = tmp2[0];
+	const int real_3 = tmp3[0];
+	const int real_4 = tmp4[0];
+
+
+	//Then
+	const int expct_1 = 'а';
+	const int expct_2 = 'в';
+	const int expct_3 = 'п';
+	const int expct_4 = 'щ';
+
+	ASSERT_EQUAL(expct_1, real_1);
+	ASSERT_EQUAL(expct_2, real_2);
+	ASSERT_EQUAL(expct_3, real_3);
+	ASSERT_EQUAL(expct_4, real_4);
+}
+
 CTEST(equation_suite, exchange_of_eng_words)
 {
 	//Given
