@@ -159,9 +159,10 @@ CTEST(equation_suite, stok_single)
 CTEST(equation_suite, sort_eng)
 {
 	//Given
-	char string[]= "b a c";
-	char *ptr[3];
-	stok(string, ptr);
+	char *ptr[2];
+	ptr[0]="b";
+	ptr[1]="a";
+	ptr[2]="c";
 	sort(ptr, 3);
 	char *tmp1 = ptr[0];
 	char *tmp2 = ptr[1];
