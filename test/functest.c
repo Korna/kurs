@@ -27,7 +27,7 @@ CTEST(equation_suite, crop_of_symbols_rus)
 	//When
 	char fstring[260];
 	crop(string, fstring);
-	const int a = fstring[2]
+	const int a = fstring[2];
 
 	//Then
 	const int ch = 'ä';
