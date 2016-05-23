@@ -156,10 +156,10 @@ CTEST(equation_suite, stok_single)
 	ASSERT_EQUAL(real, expct);
 }
 
-CTEST(equation_suite, sort_rus)
+CTEST(equation_suite, sort_eng)
 {
 	//Given
-	char string[]= "bbbbbb aaaaaaa ccccc";
+	char string[]= "bbb aaa ccc";
 	char *ptr[3];
 	stok(string, ptr);
 	sort(ptr, b);
