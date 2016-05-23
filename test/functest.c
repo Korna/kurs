@@ -208,8 +208,8 @@ CTEST(equation_suite, exchange_of_rus_words)
 	char *ptr[2];
 	stok(string, ptr);
 	exchange(ptr, 1);
-	char *tmp1 = ptr[0];
-	char *tmp2 = ptr[1];
+	char *tmp2 = ptr[0];
+	char *tmp1 = ptr[1];
 	//When
 	
 	const int real_ya = tmp2[0];
