@@ -192,10 +192,10 @@ CTEST(equation_suite, exchange_of_words)
 	char *tmp2 = ptr[1];
 	//When
 	
-	const int a = tmp1[0];
-	const int b = 'l';
+	const int real = tmp1[0];
+	const int expct = 'a';
 
 	//Then
-	ASSERT_EQUAL(b, a);
+	ASSERT_EQUAL(expct, real);
 
 }
