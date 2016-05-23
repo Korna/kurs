@@ -186,6 +186,7 @@ CTEST(equation_suite, sort_eng)
 
 CTEST(equation_suite, sort_rus)
 {
+	setlocale(LC_ALL, "Rus");
 	//Given
 	char *ptr[4];
 	ptr[0]="прт";
