@@ -18,8 +18,9 @@ CTEST(equation_suite, crop_of_symbols)
 
 }
 
-CTEST(equation_suite, crop_of_symbols2)
+CTEST(equation_suite, crop_of_symbols_rus)
 {
+	setlocale(LC_ALL, "Rus");
 	//Given
 	const char string[] = "дид";
 	
