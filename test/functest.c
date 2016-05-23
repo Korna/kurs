@@ -207,17 +207,17 @@ CTEST(equation_suite, exchange_of_rus_words)
 	char string[]= "במ ÿחü ר";
 	char *ptr[2];
 	stok(string, ptr);
-	exchange(ptr, 1);
-	char *tmp2 = ptr[1];
-	char *tmp1 = ptr[2];
+	exchange(ptr, 0);
+	char *tmp1 = ptr[1];
+	char *tmp = ptr[0];
 	//When
 	
-	const int real_1 = tmp2[0];
-	const int expct_1 = 'ר';
-	const int real_2 = tmp1[0];
-	const int expct_2 = 'ÿ';
+	const int real = tmp[0];
+	const int expct = 'ÿ';
+	const int real_1 = tmp1[0];
+	const int expct_1 = 'ב';
 
 	//Then
 	ASSERT_EQUAL(real_1, expct_1);
-	ASSERT_EQUAL(real_2, expct_2);
+	ASSERT_EQUAL(real, expct);
 }
