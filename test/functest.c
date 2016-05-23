@@ -10,10 +10,12 @@ CTEST(equation_suite, cropofsymbols)
 	//When
 	char fstring[260];
 	crop(string, fstring);
-	int ch = 's';
-	int a = fstring[0];
+	const int a = fstring[0];
 
 	//Then
+	const int ch = 's';
+
+
 	ASSERT_EQUAL(a, ch);
 
 }
@@ -26,9 +28,11 @@ CTEST(equation_suite, cropofsymbols)
 	//When
 	char fstring[260];
 	crop(string, fstring);
-	const int ch = 'd';
 	const int a = fstring[2];
 
 	//Then
+	const int ch = 'd';
+
+
 	ASSERT_EQUAL(a, ch);
 }
