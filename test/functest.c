@@ -212,12 +212,12 @@ CTEST(equation_suite, exchange_of_rus_words)
 	char *tmp1 = ptr[2];
 	//When
 	
-	const int real_ya = tmp2[0];
-	const int expct_ya = 'ÿ';
-	const int real_w = tmp1[0];
-	const int expct_w = 'ø';
+	const int real_1 = tmp2[0];
+	const int expct_1 = 'ø';
+	const int real_2 = tmp1[0];
+	const int expct_2 = 'ÿ';
 
 	//Then
-	ASSERT_EQUAL(real_ya, expct_ya);
-	ASSERT_EQUAL(real_w, expct_w);
+	ASSERT_EQUAL(real_1, expct_1);
+	ASSERT_EQUAL(real_2, expct_2);
 }
