@@ -163,7 +163,7 @@ CTEST(equation_suite, sort_eng)
 	ptr[0]="b";
 	ptr[1]="a";
 	ptr[2]="c";
-	sort(ptr, 3);
+	sort(ptr, 2);
 	char *tmpa = ptr[0];
 	char *tmpb = ptr[1];
 	char *tmpc = ptr[2];
