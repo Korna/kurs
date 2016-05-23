@@ -164,14 +164,14 @@ CTEST(equation_suite, sort_eng)
 	ptr[1]="a";
 	ptr[2]="c";
 	sort(ptr, 3);
-	char *tmpa = ptr[0];
-	char *tmpb = ptr[1];
-	char *tmpc = ptr[2];
+	char *tmp_a = ptr[0];
+	char *tmp_b = ptr[1];
+	char *tmp_c = ptr[2];
 
 	//When
-	const int real_a = tmpa[0];
-	const int real_b = tmpb[0];
-	const int real_c = tmpc[0];
+	const int real_a = tmp_a[0];
+	const int real_b = tmp_b[0];
+	const int real_c = tmp_c[0];
 
 
 	//Then
