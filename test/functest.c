@@ -164,19 +164,19 @@ CTEST(equation_suite, sort_eng)
 	ptr[1]="a";
 	ptr[2]="c";
 	sort(ptr, 3);
-	char *tmp1 = ptr[0];
-	char *tmp2 = ptr[1];
-	char *tmp3 = ptr[2];
+	char *tmpa = ptr[0];
+	char *tmpb = ptr[1];
+	char *tmpc = ptr[2];
 	//When
 	
 	const int expct_a = 'a';
-	const int real_a = tmp1[0];
 	const int expct_b = 'b';
-	const int real_b = tmp2[0];
 	const int expct_c = 'c';
-	const int real_c = tmp3[0];
 
 	//Then
+	const int real_a = tmpa[0];
+	const int real_b = tmpb[0];
+	const int real_c = tmpc[0];
 	ASSERT_EQUAL(expct_a, real_a);
 	ASSERT_EQUAL(expct_b, real_b);
 	ASSERT_EQUAL(expct_c, real_c);
