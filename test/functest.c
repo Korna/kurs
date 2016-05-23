@@ -123,17 +123,19 @@ CTEST(equation_suite, stok_multiple)
 	//Given
 	char string[]= "aaaay lmaaao";
 	char *ptr[2];
-	stok(string, ptr);
+	int size = stok(string, ptr);
 	char *tmp1 = ptr[0];
 	char *tmp2 = ptr[1];
+
 	//When
-	
 	const int a = tmp2[0];
-	const int b = 'a';
-	const int c = 'l';
+	const int b = 'l';
+	const int c = 'a';//change
 	const int d = tmp1[0];
+	const exp_size = 1;
 
 	//Then
 	ASSERT_EQUAL(b, a);
 	ASSERT_EQUAL(d, c);
+	ASSERT_EQUAL(exp_size, size);
 }
