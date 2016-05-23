@@ -85,3 +85,20 @@ CTEST(string_process, search_of_eng_word)
 	ASSERT_EQUAL(rv, a);
 
 }
+
+CTEST(equation_suite, search_of_empty)
+{
+	
+	//Given
+	const char string[] = "123456789";
+	const char ch = 'Z';
+	
+	//When
+	int rv = schr(string, ch);
+
+	//Then
+	const int a = -1;
+
+	ASSERT_EQUAL(rv, a);
+
+}
