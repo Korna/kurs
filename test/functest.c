@@ -5,7 +5,7 @@
 CTEST(equation_suite, cropofsymbols)
 {
 	//Given
-	const char string[] = "...sad";
+	char string[] = "...sad";
 	
 	//When
 	char fstring[260];
@@ -28,7 +28,7 @@ CTEST(strings_process, search_of_rus_word)
 	const char ch = 'ÿ';
 	
 	//When
-	rv = schr(string, ch);
+	int rv = schr(string, ch);
 	
 
 	//Then
@@ -45,10 +45,10 @@ CTEST(string_process, search_of_eng_word)
 	const int char ch = 'w';
 	
 	//When
-	const int rv = schr(string, ch);
-	const int a = 1;
+	int rv = schr(string, ch);
 
 	//Then
+	const int a = 1;
 	ASSERT_EQUAL(rv, a);
 
 }
