@@ -102,3 +102,18 @@ CTEST(equation_suite, search_of_empty)
 	ASSERT_EQUAL(rv, a);
 
 }
+
+CTEST(equation_suite, search_of_eng_word2)
+{
+	//Given
+	const int char string[] = "TTT";
+	const int char ch = 'T';
+	
+	//When
+	int rv = schr(string, ch);
+	const int a = 0;
+
+	//Then
+	ASSERT_EQUAL(rv, a);
+
+}
