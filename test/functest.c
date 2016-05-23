@@ -117,3 +117,22 @@ CTEST(equation_suite, search_of_eng_word2)
 	ASSERT_EQUAL(rv, a);
 
 }
+
+CTEST(equation_suite, exchange1)
+{
+	//Given
+	char string[]= "lmaaao aaaayyy";
+	char *ptr[2];
+	stok(string, ptr);
+	exchange(ptr, 0);
+
+	//When
+	char *tmp1 = ptr[0];
+	char *tmp2 = ptr[1];
+
+	//Then
+	const int a = tmp1[0];
+	const int b = 'l';
+	ASSERT_EQUAL(b, a);
+
+}
