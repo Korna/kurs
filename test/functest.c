@@ -24,7 +24,7 @@ CTEST(strings_process, search_of_rus_word)
 {
 	setlocale(LC_ALL, "Rus");
 	//Given
-	const char string[] = "...ÿקסלטנ.";
+	const char string[8] = "...ÿקסלטנ";
 	const char ch = 'ÿ';
 	
 	//When
@@ -32,7 +32,7 @@ CTEST(strings_process, search_of_rus_word)
 	
 
 	//Then
-	const a = 3;
+	const int a = 3;
 
 	ASSERT_EQUAL(rv, a);
 
@@ -41,8 +41,8 @@ CTEST(strings_process, search_of_rus_word)
 CTEST(string_process, search_of_eng_word)
 {
 	//Given
-	const int char string[] = "twitter";
-	const int char ch = 'w';
+	const char string[] = "twitter";
+	const char ch = 'w';
 	
 	//When
 	int rv = schr(string, ch);
